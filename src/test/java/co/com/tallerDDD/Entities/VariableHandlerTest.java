@@ -30,15 +30,8 @@ public class VariableHandlerTest {
     }
 
     @Test
-    void bondVariables(){
-        variableHandler.addVariable("panda.jpg");
-        var files = Stream.of(new File(String.valueOf(testPath)).listFiles())
-                .map(file -> file.getName())
-                .collect(Collectors.toList());
-        System.out.println(files.toString());
-        System.out.println(variableHandler.variables());
-        variableHandler.bondVariables();
-        System.out.println(variableHandler.pathsToVariables());
-        assert variableHandler.pathsToVariables().size() > 0;
+    void fillFilesPaths(){
+        variableHandler.fillFilesPaths(testPath.toString());
+        assert variableHandler.filesPaths().size() > 0;
     }
 }

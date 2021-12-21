@@ -21,10 +21,10 @@ public class VariableHandler extends Entity<VariableHandlerId> {
         this.variables = new HashSet<>(variables);
     }
 
-    public void bondVariables(){
-        this.pathsToVariables = new HashMap<>(Stream.of(new File(String.valueOf(filesPaths)))
-                .filter(file -> !file.getName().equals(""))
-                .collect(Collectors.toMap(File::getName, File::toString)));
+    public Set<Path> fillFilesPaths(String directory){
+        return  Stream.of(new File(directory).listFiles())
+                .map(file -> Path.of(String.valueOf(file)))
+                .collect(Collectors.toSet());
     }
 
     public HashMap<String, String> pathsToVariables(){
@@ -37,5 +37,9 @@ public class VariableHandler extends Entity<VariableHandlerId> {
 
     public Set<String> variables(){
         return variables;
+    }
+
+    public Set<Path> filesPaths(){
+        return filesPaths;
     }
 }
