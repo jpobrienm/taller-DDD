@@ -8,13 +8,13 @@ public class GeologicalMetadata {
 
     private final List<String> geoMetadata;
 
-    public GeologicalMetadata(Integer cellSize, String origin, String xCoord, String yCoord, String geometry){
+    public GeologicalMetadata(Integer cellSize, Integer origin, Integer xCoord, Integer yCoord, String geometry){
         geoMetadata = new ArrayList<>();
         geoMetadata.add(cellSize.toString());
-        geoMetadata.add(origin);
-        geoMetadata.add(xCoord);
-        geoMetadata.add(xCoord);
-        geoMetadata.add(yCoord);
+        geoMetadata.add(origin.toString());
+        geoMetadata.add(xCoord.toString());
+        geoMetadata.add(xCoord.toString());
+        geoMetadata.add(yCoord.toString());
         geoMetadata.add(geometry);
     }
 

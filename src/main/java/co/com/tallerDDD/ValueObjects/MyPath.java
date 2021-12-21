@@ -9,5 +9,6 @@ public class MyPath {
         this.myPath = myPath;
     }
 
+    public static MyPath of(Path myPath){return new MyPath(myPath);}
     public Path myPath(){return myPath;}
 }

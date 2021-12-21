@@ -13,7 +13,7 @@ public class MyFile {
         this.fileName = fileName;
     }
 
-    public Path getFilePath(){return filePath;}
-    public String getFileName(){return fileName;}
+    public Path filePath(){return filePath;}
+    public String fileName(){return fileName;}
 
 }
