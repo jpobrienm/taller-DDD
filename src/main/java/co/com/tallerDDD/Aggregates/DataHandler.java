@@ -1,4 +1,8 @@
 package co.com.tallerDDD.Aggregates;
 
-public class DataHandler {
+import co.com.tallerDDD.IDs.DataHandlerId;
+import co.com.tallerDDD.Models.AggregateRoot;
+
+public class DataHandler extends AggregateRoot<DataHandlerId> {
+
 }

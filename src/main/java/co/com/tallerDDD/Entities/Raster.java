@@ -4,24 +4,28 @@ import co.com.tallerDDD.IDs.RasterId;
 import co.com.tallerDDD.Models.Entity;
 import co.com.tallerDDD.ValueObjects.GeologicalMetadata;
 import co.com.tallerDDD.ValueObjects.MyFile;
+import co.com.tallerDDD.ValueObjects.MyPath;
 
+import java.lang.management.ThreadInfo;
+import java.nio.file.Path;
 import java.util.List;
 import java.util.Objects;
 
 public class Raster extends Entity<RasterId> {
 
-    private final RasterId rasterId;
-    private final GeologicalMetadata geoMetadata;
-    private MyFile rasterFile;
+    private GeologicalMetadata geoMetadata;
+    private MyPath rasterPath;
 
-    public Raster(RasterId rasterId,MyFile rasterFile, GeologicalMetadata geoMetadata){
+    public Raster(RasterId rasterId, MyPath rasterPath, GeologicalMetadata geoMetadata){
         super(rasterId);
-        this.rasterId = Objects.requireNonNull(rasterId);
-        this.rasterFile = Objects.requireNonNull(rasterFile);
+        this.rasterPath = Objects.requireNonNull(rasterPath);
         this.geoMetadata = Objects.requireNonNull(geoMetadata);
     }
 
-    public RasterId rasterId(){return rasterId;}
+    public void changeRasterFile(MyPath rasterPath){this.rasterPath = rasterPath;}
+    public void changeGeologicalMetadata(GeologicalMetadata geoMetadata){this.geoMetadata = geoMetadata;}
+
     public GeologicalMetadata geologicalMetadata(){return geoMetadata;}
+    public MyPath getRasterFile(){return rasterPath;}
 
 }
