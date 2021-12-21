@@ -25,15 +25,23 @@ public class FileHandler extends AggregateRoot<FileHandlerId> {
         this.applyChange(new FileHandlerCreated(fileHandlerId));
     }
 
-    private void repository(RepositoryId repositoryId, Path repositoryPath){
+    public void createRepository(RepositoryId repositoryId, Path repositoryPath){
         this.repository =  new Repository(repositoryId, repositoryPath);
         this.applyChange(new RepositoryCreated(repositoryId, repositoryPath));
     }
 
-    private void variableHandler(Set<String> variables){
+    public void variableHandler(Set<String> variables){
         VariableHandlerId variableHandlerId = new VariableHandlerId();
         Set<Path> filesPaths = this.repository.repositoryFiles();
         this.variableHandler = new VariableHandler(variableHandlerId, filesPaths, variables);
         this.applyChange(new VariableHandlerCreated(variableHandlerId));
+    }
+
+    public Repository fileHandlerRepository(){
+        return repository;
+    }
+
+    public VariableHandler fileHandlerVariableHandler(){
+        return variableHandler;
     }
 }
