@@ -1,6 +1,8 @@
 package co.com.tallerDDD.Aggregates;
 
 import co.com.tallerDDD.DomainEvents.FileHandlerCreated;
+import co.com.tallerDDD.DomainEvents.RepositoryCreated;
+import co.com.tallerDDD.DomainEvents.VariableHandlerCreated;
 import co.com.tallerDDD.Entities.Repository;
 import co.com.tallerDDD.Entities.VariableHandler;
 import co.com.tallerDDD.IDs.FileHandlerId;
@@ -25,11 +27,13 @@ public class FileHandler extends AggregateRoot<FileHandlerId> {
 
     private void repository(RepositoryId repositoryId, Path repositoryPath){
         this.repository =  new Repository(repositoryId, repositoryPath);
+        this.applyChange(new RepositoryCreated(repositoryId, repositoryPath));
     }
 
     private void variableHandler(Set<String> variables){
         VariableHandlerId variableHandlerId = new VariableHandlerId();
         Set<Path> filesPaths = this.repository.repositoryFiles();
         this.variableHandler = new VariableHandler(variableHandlerId, filesPaths, variables);
+        this.applyChange(new VariableHandlerCreated(variableHandlerId));
     }
 }
