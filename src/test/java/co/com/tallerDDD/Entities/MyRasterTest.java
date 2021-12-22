@@ -1,7 +1,8 @@
 package co.com.tallerDDD.Entities;
 
-import co.com.tallerDDD.IDs.MyRasterId;
-import co.com.tallerDDD.ValueObjects.GeologicalMetadata;
+import co.com.tallerDDD.DataHandler.MyRaster;
+import co.com.tallerDDD.DataHandler.Value.MyRasterId;
+import co.com.tallerDDD.Generics.GeologicalMetadata;
 import org.junit.jupiter.api.Test;
 
 import java.awt.image.Raster;

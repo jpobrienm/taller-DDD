@@ -1,6 +1,6 @@
-package co.com.tallerDDD.Entities;
+package co.com.tallerDDD.FileHandler;
 
-import co.com.tallerDDD.IDs.VariableHandlerId;
+import co.com.tallerDDD.FileHandler.Value.VariableHandlerId;
 import co.com.tallerDDD.Models.Entity;
 
 import java.io.File;

@@ -1,18 +1,14 @@
-package co.com.tallerDDD.Aggregates;
+package co.com.tallerDDD.FileHandler;
 
-import co.com.tallerDDD.DomainEvents.FileHandlerCreated;
-import co.com.tallerDDD.DomainEvents.RepositoryCreated;
-import co.com.tallerDDD.DomainEvents.VariableHandlerCreated;
-import co.com.tallerDDD.Entities.Repository;
-import co.com.tallerDDD.Entities.VariableHandler;
-import co.com.tallerDDD.IDs.FileHandlerId;
-import co.com.tallerDDD.IDs.MyRasterId;
-import co.com.tallerDDD.IDs.RepositoryId;
-import co.com.tallerDDD.IDs.VariableHandlerId;
+import co.com.tallerDDD.FileHandler.Event.FileHandlerCreated;
+import co.com.tallerDDD.FileHandler.Event.RepositoryCreated;
+import co.com.tallerDDD.FileHandler.Event.VariableHandlerCreated;
+import co.com.tallerDDD.FileHandler.Value.FileHandlerId;
+import co.com.tallerDDD.FileHandler.Value.RepositoryId;
+import co.com.tallerDDD.FileHandler.Value.VariableHandlerId;
 import co.com.tallerDDD.Models.AggregateRoot;
 
 import java.nio.file.Path;
-import java.util.Objects;
 import java.util.Set;
 
 public class FileHandler extends AggregateRoot<FileHandlerId> {

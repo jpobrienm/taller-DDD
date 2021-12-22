@@ -1,8 +1,8 @@
-package co.com.tallerDDD.Entities;
+package co.com.tallerDDD.DataHandler;
 
-import co.com.tallerDDD.IDs.MyRasterId;
+import co.com.tallerDDD.DataHandler.Value.MyRasterId;
 import co.com.tallerDDD.Models.Entity;
-import co.com.tallerDDD.ValueObjects.GeologicalMetadata;
+import co.com.tallerDDD.Generics.GeologicalMetadata;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;

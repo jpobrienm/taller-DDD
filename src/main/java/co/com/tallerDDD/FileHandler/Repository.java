@@ -1,11 +1,8 @@
-package co.com.tallerDDD.Entities;
+package co.com.tallerDDD.FileHandler;
 
-import co.com.tallerDDD.IDs.RepositoryId;
+import co.com.tallerDDD.FileHandler.Value.RepositoryId;
 import co.com.tallerDDD.Models.Entity;
-import co.com.tallerDDD.ValueObjects.MyFile;
-import co.com.tallerDDD.ValueObjects.MyPath;
 
-import java.awt.image.Raster;
 import java.io.File;
 import java.nio.file.Path;
 import java.util.Objects;

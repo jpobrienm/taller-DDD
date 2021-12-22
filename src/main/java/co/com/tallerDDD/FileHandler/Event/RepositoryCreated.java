@@ -1,7 +1,6 @@
-package co.com.tallerDDD.DomainEvents;
+package co.com.tallerDDD.FileHandler.Event;
 
-import co.com.tallerDDD.Entities.Repository;
-import co.com.tallerDDD.IDs.RepositoryId;
+import co.com.tallerDDD.FileHandler.Value.RepositoryId;
 import co.com.tallerDDD.Models.DomainEvent;
 
 import java.nio.file.Path;

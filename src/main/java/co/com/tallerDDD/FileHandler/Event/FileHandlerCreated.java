@@ -1,10 +1,7 @@
-package co.com.tallerDDD.DomainEvents;
+package co.com.tallerDDD.FileHandler.Event;
 
-import co.com.tallerDDD.Aggregates.FileHandler;
-import co.com.tallerDDD.IDs.FileHandlerId;
+import co.com.tallerDDD.FileHandler.Value.FileHandlerId;
 import co.com.tallerDDD.Models.DomainEvent;
-
-import java.io.File;
 
 public class FileHandlerCreated extends DomainEvent {
 

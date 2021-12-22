@@ -1,8 +1,7 @@
-package co.com.tallerDDD.ValueObjects;
+package co.com.tallerDDD.Generics;
 
 import java.io.Serializable;
 import java.util.Objects;
-import java.util.Set;
 
 public class Operation implements Serializable {
 
@@ -15,4 +14,8 @@ public class Operation implements Serializable {
     public String operation(){return this.myOperation;}
 
     public static Operation of(String operation){return new Operation(operation);}
+
+    public boolean operationEquals(Operation myOperation){
+        return this.myOperation.equals(myOperation.operation());
+    }
 }

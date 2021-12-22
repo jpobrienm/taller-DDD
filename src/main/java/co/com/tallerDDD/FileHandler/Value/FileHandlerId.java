@@ -1,9 +1,6 @@
-package co.com.tallerDDD.IDs;
+package co.com.tallerDDD.FileHandler.Value;
 
-import co.com.tallerDDD.Aggregates.FileHandler;
 import co.com.tallerDDD.Models.Id;
-
-import javax.xml.stream.events.DTD;
 
 public class FileHandlerId extends Id {
     private FileHandlerId(String value){super(value);}

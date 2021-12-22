@@ -1,6 +1,5 @@
-package co.com.tallerDDD.IDs;
+package co.com.tallerDDD.DataHandler.Value;
 
-import co.com.tallerDDD.Aggregates.DataHandler;
 import co.com.tallerDDD.Models.Id;
 
 public class DataHandlerId extends Id {

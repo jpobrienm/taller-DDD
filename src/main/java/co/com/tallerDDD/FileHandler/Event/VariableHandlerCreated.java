@@ -1,6 +1,6 @@
-package co.com.tallerDDD.DomainEvents;
+package co.com.tallerDDD.FileHandler.Event;
 
-import co.com.tallerDDD.IDs.VariableHandlerId;
+import co.com.tallerDDD.FileHandler.Value.VariableHandlerId;
 import co.com.tallerDDD.Models.DomainEvent;
 
 public class VariableHandlerCreated extends DomainEvent {

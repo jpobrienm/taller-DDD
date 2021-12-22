@@ -1,4 +1,4 @@
-package co.com.tallerDDD.IDs;
+package co.com.tallerDDD.SpecializedCalculations.Value;
 
 import co.com.tallerDDD.Models.Id;
 

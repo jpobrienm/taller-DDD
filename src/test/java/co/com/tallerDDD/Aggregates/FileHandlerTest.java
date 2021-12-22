@@ -1,11 +1,8 @@
 package co.com.tallerDDD.Aggregates;
 
-import co.com.tallerDDD.DomainEvents.VariableHandlerCreated;
-import co.com.tallerDDD.Entities.Repository;
-import co.com.tallerDDD.Entities.VariableHandler;
-import co.com.tallerDDD.IDs.FileHandlerId;
-import co.com.tallerDDD.IDs.RepositoryId;
-import co.com.tallerDDD.IDs.VariableHandlerId;
+import co.com.tallerDDD.FileHandler.FileHandler;
+import co.com.tallerDDD.FileHandler.Value.FileHandlerId;
+import co.com.tallerDDD.FileHandler.Value.RepositoryId;
 import org.junit.Test;
 
 import java.nio.file.Path;

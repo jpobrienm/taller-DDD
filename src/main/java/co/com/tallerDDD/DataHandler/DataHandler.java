@@ -1,13 +1,14 @@
-package co.com.tallerDDD.Aggregates;
+package co.com.tallerDDD.DataHandler;
 
-import co.com.tallerDDD.Entities.MyRaster;
-import co.com.tallerDDD.Entities.Repository;
-import co.com.tallerDDD.Entities.Table;
-import co.com.tallerDDD.IDs.*;
+import co.com.tallerDDD.DataHandler.Value.DataHandlerId;
+import co.com.tallerDDD.DataHandler.Value.MyRasterId;
+import co.com.tallerDDD.DataHandler.Value.TableId;
+import co.com.tallerDDD.FileHandler.FileHandler;
+import co.com.tallerDDD.FileHandler.Repository;
+import co.com.tallerDDD.FileHandler.Value.FileHandlerId;
 import co.com.tallerDDD.Models.AggregateRoot;
-import co.com.tallerDDD.ValueObjects.GeologicalMetadata;
+import co.com.tallerDDD.Generics.GeologicalMetadata;
 
-import java.awt.image.Raster;
 import java.nio.file.Path;
 import java.util.Objects;
 import java.util.Set;

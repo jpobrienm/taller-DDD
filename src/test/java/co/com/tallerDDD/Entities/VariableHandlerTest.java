@@ -1,10 +1,9 @@
 package co.com.tallerDDD.Entities;
 
-import co.com.tallerDDD.IDs.VariableHandlerId;
-import org.apache.commons.collections.set.ListOrderedSet;
+import co.com.tallerDDD.FileHandler.VariableHandler;
+import co.com.tallerDDD.FileHandler.Value.VariableHandlerId;
 import org.junit.jupiter.api.Test;
 
-import java.io.DataOutput;
 import java.io.File;
 import java.nio.file.Path;
 import java.util.HashSet;

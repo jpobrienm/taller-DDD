@@ -1,4 +1,4 @@
-package co.com.tallerDDD.ValueObjects;
+package co.com.tallerDDD.Generics;
 
 import java.io.File;
 import java.nio.file.*;

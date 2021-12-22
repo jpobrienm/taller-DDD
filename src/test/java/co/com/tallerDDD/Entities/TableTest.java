@@ -1,6 +1,7 @@
 package co.com.tallerDDD.Entities;
 
-import co.com.tallerDDD.IDs.TableId;
+import co.com.tallerDDD.DataHandler.Table;
+import co.com.tallerDDD.DataHandler.Value.TableId;
 import org.junit.jupiter.api.Test;
 
 import java.nio.file.Path;
