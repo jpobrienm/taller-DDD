@@ -1,10 +1,11 @@
 package co.com.tallerDDD.ValueObjects;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class GeologicalMetadata {
+public class GeologicalMetadata implements Serializable {
 
     private final List<String> geoMetadata;
 

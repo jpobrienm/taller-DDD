@@ -41,4 +41,12 @@ public class DataHandler extends AggregateRoot<DataHandlerId>{
         rasterSet = rasterSet.stream().filter(r -> !r.equalRaster(myRaster)).collect(Collectors.toSet());
     }
 
+    public void addTable(Path tablePath){
+        tableSet.add(new Table(new TableId(), tablePath));
+    }
+
+    public void removeTable(Table myTable){
+        tableSet = tableSet.stream().filter(t -> !t.tableEquals(myTable)).collect(Collectors.toSet());
+    }
+
 }

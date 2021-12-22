@@ -38,4 +38,8 @@ public class Table extends Entity<TableId> {
         return null;
     }
 
+    public boolean tableEquals(Table myTable){
+        return this.tablePath.equals(myTable.tablePath);
+    }
+
 }
