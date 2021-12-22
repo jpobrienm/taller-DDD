@@ -1,5 +1,9 @@
 package co.com.tallerDDD.DataHandler;
 
+import co.com.tallerDDD.DataHandler.Event.RasterAdded;
+import co.com.tallerDDD.DataHandler.Event.RasterRemoved;
+import co.com.tallerDDD.DataHandler.Event.TableAdded;
+import co.com.tallerDDD.DataHandler.Event.TableRemoved;
 import co.com.tallerDDD.DataHandler.Value.DataHandlerId;
 import co.com.tallerDDD.DataHandler.Value.MyRasterId;
 import co.com.tallerDDD.DataHandler.Value.TableId;
@@ -36,18 +40,22 @@ public class DataHandler extends AggregateRoot<DataHandlerId>{
 
     public void addRaster(Path rasterPath, GeologicalMetadata geologicalMetadata){
         rasterSet.add(new MyRaster(new MyRasterId(), rasterPath, geologicalMetadata));
+        this.applyChange(new RasterAdded(rasterPath, geologicalMetadata));
     }
 
     public void removeRaster(MyRaster myRaster){
         rasterSet = rasterSet.stream().filter(r -> !r.equalRaster(myRaster)).collect(Collectors.toSet());
+        this.applyChange(new RasterRemoved(myRaster));
     }
 
     public void addTable(Path tablePath){
         tableSet.add(new Table(new TableId(), tablePath));
+        this.applyChange(new TableAdded(tablePath));
     }
 
     public void removeTable(Table myTable){
         tableSet = tableSet.stream().filter(t -> !t.tableEquals(myTable)).collect(Collectors.toSet());
+        this.applyChange(new TableRemoved(myTable));
     }
 
 }

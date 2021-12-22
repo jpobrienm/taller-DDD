@@ -2,6 +2,8 @@ package co.com.tallerDDD.SpecializedCalculations;
 
 import co.com.tallerDDD.Generics.Operation;
 import co.com.tallerDDD.Models.AggregateRoot;
+import co.com.tallerDDD.SpecializedCalculations.Event.GeologicalCalculationsCreated;
+import co.com.tallerDDD.SpecializedCalculations.Event.StatisticalCalculationsCreated;
 import co.com.tallerDDD.SpecializedCalculations.Value.GeologicalCalculationsId;
 import co.com.tallerDDD.SpecializedCalculations.Value.SpecializedCalculationsId;
 import co.com.tallerDDD.SpecializedCalculations.Value.StatisticalCalculationsId;
@@ -20,11 +22,12 @@ public class SpecializedCalculations extends AggregateRoot<SpecializedCalculatio
 
     public void geologicalCalculations(GeologicalCalculationsId geologicalCalculationsId){
         geologicalCalculations = new GeologicalCalculations(geologicalCalculationsId);
-        this.applyChange(new GeologicalCalculationsCreated());
+        this.applyChange(new GeologicalCalculationsCreated(geologicalCalculationsId));
     }
 
     public void statisticalCalculations(StatisticalCalculationsId statisticalCalculationsId){
         statisticalCalculations = new StatisticalCalculations(statisticalCalculationsId);
+        this.applyChange(new StatisticalCalculationsCreated(statisticalCalculationsId));
     }
 
     public void addOperation(String operation){
