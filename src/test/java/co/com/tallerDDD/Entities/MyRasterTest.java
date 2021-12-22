@@ -19,7 +19,7 @@ public class MyRasterTest {
     void createMyRaster(){
 
         assert Objects.nonNull(dummyRaster.getId());
-        assert Objects.nonNull(dummyRaster.rasterFile());
+        assert Objects.nonNull(dummyRaster.rasterPath());
         assert Objects.nonNull(dummyRaster.geologicalMetadata());
     }
 

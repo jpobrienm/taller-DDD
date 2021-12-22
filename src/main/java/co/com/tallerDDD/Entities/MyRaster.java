@@ -48,6 +48,9 @@ public class MyRaster extends Entity<MyRasterId> {
     }
 
     public GeologicalMetadata geologicalMetadata(){return geoMetadata;}
-    public Path rasterFile(){return rasterPath;}
+    public Path rasterPath(){return rasterPath;}
+    public boolean equalRaster(MyRaster myRaster){
+        return myRaster.rasterPath.equals(this.rasterPath);
+    }
 
 }
